@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to projects_path, notice: "Pledge Project has been created. GRAB A BEER!"
+      redirect_to projects_path, notice: "Project has been created."
     else
       flash[:alert] = "Project has not been added."
       render :new
